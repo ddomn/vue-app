@@ -1,0 +1,85 @@
+/* 默认隐藏手机版头部、导航和页脚 */
+
+#divHead_mobile {
+    display: none
+}
+
+#divNav_mobile {
+    display: none
+}
+
+#divBottom_mobile {
+    display: none
+}
+
+@media(max-width:960px) {
+    /* 网页全屏显示 */
+    body {
+        width: 100%;
+    }
+    /* 正文全屏显示 */
+    #divMain {
+        width: 100%
+    }
+    /* 为了避免正文图片超出屏幕宽度 */
+    /* 正文图片宽度最多是屏幕宽度的90% */
+    #divMain img {
+        max-width: 90%
+    }
+    /* 隐藏头部、导航、侧栏、页脚 */
+    #divHead {
+        display: none
+    }
+    #divNav {
+        display: none
+    }
+    #divSide {
+        display: none
+    }
+    #divBottom {
+        display: none
+    }
+    /* 显示手机版头部、导航和页脚 */
+    #divHead_mobile {
+        display: block
+    }
+    #divNav_mobile {
+        display: block
+    }
+    #divBottom_mobile {
+        display: block
+    }
+}
+
+
+/* css3媒体查询语法： */
+
+
+/*@media screen and (min-width:1440px) and (max-width:1600px){}*/
+
+@media screen and (min-width:1440px) {
+    /*大于等于1440*/
+    /*这里是特定的样式表*/
+    body,
+    input,
+    textarea,
+    select,
+    small,
+    a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    /*懒人建站*/
+}
+
+@media screen and (max-width:768px) {
+    /*不大于768px的设备尺寸中 响应式布局的特定样式*/
+}
+
+@media screen and (max-width:360px) {}
+
+@media screen and (max-width:320px) {}
+
+@media(max-width:960px) {}
