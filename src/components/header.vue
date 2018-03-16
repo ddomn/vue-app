@@ -12,9 +12,9 @@
                 </ul>
             </div>
             <div class="navo ovhd">
-                <a href="#">
+                <router-link to="/">
                     <img src="@/assets/img/lg.png" alt="仲景养汇城" />
-                </a>
+                </router-link>
             </div>
     </div>
 </template>
@@ -43,3 +43,42 @@ export default {
   }
 }
 </script>
+<style>
+/* nav */
+.top_nav {
+    background-color: #f3f3f3;
+    width: 100%;
+    overflow: hidden;
+}
+.top_nav a p {
+    font-size: 2rem;
+}
+.top_nav .navo a img {
+    float: left;
+    margin: .5rem 1rem;
+}
+.top_nav .navt {
+    margin: auto;
+    float: right;
+    margin-right: 4rem;
+}
+.top_nav .navt ul li {
+    list-style: none;
+    float: left;
+    margin: .8rem;
+}
+.top_nav .navt ul li a {
+    color: #300;
+    font-size: 2rem;
+    padding: .2rem;
+}
+
+ @media only screen and (max-width: 870px) {
+    .top_nav .navt{
+        margin-right: 1rem;
+    }
+    .top_nav .navt ul{
+        display: none;
+    }
+} 
+</style>
