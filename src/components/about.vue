@@ -7,7 +7,7 @@
         </div>
         <div class="bt ovhd">
             <ul>
-                <li v-for="id in dt" :key="id">
+                <li v-for="id in dt" :key="id.id">
                     <div>
                         <img src="../assets/img/ico.png" />
                         <h2>{{id.id}}</h2>

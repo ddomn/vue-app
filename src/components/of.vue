@@ -12,18 +12,18 @@
             </ul>
         </div>
         <div class="cp ovhd">
-            <div class="fr na" @click="addn()"><img src="../assets/img/right.png" /></div>
+            <div class="fr na" @click="addn"><img src="../assets/img/right.png" /></div>
             <div class="fl na" @click="subn()"><img src="../assets/img/left.png" /></div>
             <div class="str ovhd">
                 <ul>
                     <li v-for="cp in cpob" :key="cp.old" class="ovhd" :class="{dspn:!cp.oll}">
-                        <div class="">
-                            <div class="fr im"><img src="../assets/img/cp1.jpg" :alt=cp.bname /></div>
-                            <div class="fl zw">
-                                <h2>{{cp.bname}}</h2>
-                                <article>{{cp.text}}</article>
+                            <div class="im fr"><img :src=cp.imgsrc :alt=cp.bname /></div>
+                            <div class="zw fl">
+                                <article>
+                                    <h2>{{cp.bname}}</h2>
+                                    <p>{{cp.text}}</p>
+                                </article>
                             </div>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -35,12 +35,12 @@ export default {
   data () {
     return {
       cpob: [
-        {bname: '生态粮油', oll: true, old: 0, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。'},
-        {bname: '健康食品', oll: false, old: 1, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。'},
-        {bname: '调养茶品', oll: false, old: 2, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。'},
-        {bname: '理疗产品', oll: false, old: 3, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。'},
-        {bname: '辅助用品', oll: false, old: 4, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。'},
-        {bname: '旅游疗养', oll: false, old: 5, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。'}
+        {bname: '生态粮油', oll: true, old: 0, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。', imgsrc: require('../assets/img/cp1.jpg')},
+        {bname: '健康食品', oll: false, old: 1, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。', imgsrc: require('../assets/img/tea.png')},
+        {bname: '调养茶品', oll: false, old: 2, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。', imgsrc: require('../assets/img/cp1.jpg')},
+        {bname: '理疗产品', oll: false, old: 3, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。', imgsrc: require('../assets/img/tea.png')},
+        {bname: '辅助用品', oll: false, old: 4, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。', imgsrc: require('../assets/img/cp1.jpg')},
+        {bname: '旅游疗养', oll: false, old: 5, text: '绿色生态粮油加工、生产技术规范，并经有机认证得到的一切农副产品，是指在生产加工中不使用化学农药、化肥、化学防腐剂和添加剂，因此它是真正的源于自然、富营养、高品质的安全环保生态食物。', imgsrc: require('../assets/img/tea.png')}
       ],
       cpobl: 0
     }
@@ -53,32 +53,13 @@ export default {
     },
     addn: function () {
       this.cpob[this.cpobl].oll = !this.cpob[this.cpobl].oll
-      console.log('1' + this.cpobl)
-      if (this.cpob === 5) {
-        this.cpob = 0
-        console.log(this.cpobl)
-      } else {
-        this.cpob += 1
-        console.log(this.cpobl)
-      }
-      this.cpobl === 5 ? this.cpobl++ : this.cpobl = 0
-      this.cpob[this.cpobl].oll = true
-      console.log('2' + this.cpobl)
+      console.log(this.cpobl >= 5 ? this.cpobl = 0 : this.cpobl += 1)
+      this.cpob[this.cpobl].oll = !this.cpob[this.cpobl].oll
     },
     subn: function () {
-      console.log(this.cpob[this.cpobl].oll)
       this.cpob[this.cpobl].oll = !this.cpob[this.cpobl].oll
-      console.log(this.cpobl)
-      if (this.cpob === 0) {
-        this.cpob = 5
-        console.log(this.cpobl)
-      } else {
-        this.cpob -= 1
-        console.log(this.cpobl)
-      }
-      console.log(this.cpobl)
+      this.cpobl <= 0 ? this.cpobl = 5 : this.cpobl -= 1
       this.cpob[this.cpobl].oll = !this.cpob[this.cpobl].oll
-      console.log(this.cpob[this.cpobl].oll)
     }
   }
 }
@@ -98,15 +79,20 @@ export default {
     font-size: 1rem;
 }
 .of .bt {
-    margin: 1rem;
+    /* margin: 1rem; */
+    text-align: center;
+    width: 100%;
+}
+.of .bt ul{
+    /* display: block; */
+    margin: 2rem auto;
 }
 .of .bt ul li {
-    float: left;
-    width: 6.3%;
+    display: inline-block;
+    width: 6.3rem;
     height: 1rem;
     line-height: 1rem;
-    text-align: center;
-    margin: 0 3.5%;
+    margin: 0 2%;
     border: 1px solid #ccc;
     border-radius: 10%;
     padding: 1rem 1rem;
@@ -126,15 +112,18 @@ export default {
 .of .cp .str {
     margin: 0 10rem;
 }
-.of .cp li .str .zw{
-    width: 40%;
-}
-.of .cp li .str .zw{
+.of .cp .str .im {
     margin-top: 5rem;
     width: 40%;
+    max-width: 40rem;
 }
-.of .cp li .str img {
-    /* width: 80%; */
+.of .cp .str .zw {
+    margin-top: 5rem;
+    width: 40%;
+    padding: 4%
+}
+.of .cp .str .im img {
+    width: 80%;
 }
 .of .cp .na {
     width: 10%;
@@ -146,33 +135,27 @@ export default {
     .of .bt ul li {
         width: 1rem;
         height: 4rem;
-        margin: 0 6%;
-        padding: 1rem .8rem;
-    }
-}
-@media only screen and (max-width: 780px) {
-    .of .bt ul li {
-        width: 1rem;
-        height: 4rem;
-        margin: 0 5%;
-        padding: 1rem .8rem;
+        margin: 0 4%;
     }
     .of .cp .na {
         display: none;
     }
+    .of .cp .str {
+        margin: 0;
+    }
+    .of .cp .str li div {
+        float: none;
+    }
+    .of .cp .str .im,.of .cp .str .zw{
+        width: 96%;
+        padding: 2%;
+    }
 }
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 500px) {
     .of .bt ul li {
         width: 1rem;
         height: 4rem;
-        margin: 0 3.18%;
-        padding: 1rem .8rem;
-    }
-    .of .cp .na {
-        display: none;
-    }
-    .of .bt {
-        margin: 1rem 0rem;
+        margin: 0 2.4%;
     }
 }
 </style>
