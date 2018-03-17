@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './assets/css/main.css'
-import './assets/js/flexible.js'
-Vue.config.productionTip = true
+//  import './assets/js/flexible.js'
+Vue.config.productionTip = false
 
 router.afterEach((to, from, next) => {
   document.title = to.name

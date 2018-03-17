@@ -2,8 +2,8 @@
   <div id="app">
     <my-header />
     <router-view />
-    <a-bout />
-    <o-f />
+    <a-bout :class="{dspn:0}" />
+    <o-f :class="{dspn:0}" />
   </div>
 </template>
 

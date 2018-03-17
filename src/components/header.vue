@@ -1,20 +1,18 @@
 <template>
-   <div class="top_nav">
+   <div class="top_nav ovhd">
             <div class="navt" id="navt">
                 <ul>
                     <li v-for="nav in nav" :key="nav.id" >
                         <keep-alive>
-                          <router-link :to="nav.href" @click.native=navon(nav) :class="{butline2:nav.btl}" tag="a">
+                          <router-link :to="nav.href" @click.native=navon(nav) :class="{butline2:nav.ol}" tag="a">
                             {{nav.text}}
                           </router-link>
                         </keep-alive>
                     </li>
                 </ul>
             </div>
-            <div class="navo ovhd">
-                <router-link to="/">
-                    <img src="@/assets/img/lg.png" alt="仲景养汇城" />
-                </router-link>
+            <div class="navo">
+                <img src="@/assets/img/lg.png" alt="仲景养汇城" />
             </div>
     </div>
 </template>
@@ -23,10 +21,10 @@ export default {
   data () {
     return {
       nav: [
-        {text: '首页', href: '/index', btl: true, id: 0},
-        {text: '关于我们', href: '/about', btl: false, id: 1},
-        {text: '公司产品', href: '/of', btl: false, id: 2},
-        {text: '在线商城', href: '/online', btl: false, id: 3}
+        {text: '首页', href: '/index', ol: true, id: 0},
+        {text: '关于我们', href: '/about', ol: false, id: 1},
+        {text: '公司产品', href: '/of', ol: false, id: 2},
+        {text: '在线商城', href: '/online', ol: false, id: 3}
       ],
       navl: 0
     }
@@ -34,11 +32,11 @@ export default {
   methods: {
     navon: function (a) {
       console.log('a' + a)
-      this.nav[this.navl].btl = false
-      a.btl = true
+      this.nav[this.navl].ol = false
+      a.ol = true
       console.log(a.id)
       this.navl = a.id
-      console.log(this.nav[this.navl].btl)
+      console.log(this.nav[this.navl].ol)
     }
   }
 }
@@ -53,7 +51,7 @@ export default {
 .top_nav a p {
     font-size: 2rem;
 }
-.top_nav .navo a img {
+.top_nav .navo{
     float: left;
     margin: .5rem 1rem;
 }
@@ -78,7 +76,7 @@ export default {
         margin-right: 1rem;
     }
     .top_nav .navt ul{
-        display: none;
+        /* display: none; */
     }
-} 
+}
 </style>
