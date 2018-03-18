@@ -1,10 +1,10 @@
 <template>
    <div class="top_nav ovhd">
-       <div class="but fr" @click="navshow()">
+       <button class="but fr" @click="navshow()">
            <p></p>
            <p></p>
            <p></p>
-       </div>
+       </button>
         <div class="navt" id="navt" :class="{navtt:navdsp}">
             <ul>
                 <li v-for="nav in nav" :key="nav.id" >
@@ -60,15 +60,20 @@ export default {
 .top_nav .but {
     border: 1px solid #300;
     border-radius: 20%;
+    background: inherit;
     width: 3rem;
     height: 3rem;
     margin: .5rem;
     display: none;
+    min-width: 30px;
+    min-height: 30px;
 }
 .top_nav .but p{
     border: 1px solid #300;
-    height: 0px;
-    margin: .6rem;
+    border-radius: 1px;
+    height: 1px;
+    background: #300;
+    margin: .5rem;
 }
 .top_nav a p {
     font-size: 2rem;

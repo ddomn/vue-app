@@ -1,5 +1,5 @@
 <template>
-    <div class="of">
+    <div class="of minh">
         <div class="tp">
             <h1>我们的产品</h1>
             <span>独特的环境和地理优势；采用优质的糯高粱；秉承传统酿造工艺</span>
@@ -135,6 +135,8 @@ export default {
     .of .bt ul li {
         width: 1rem;
         height: 4rem;
+        width: 2rem\9;
+        height: 8rem\9;
         margin: 0 4%;
     }
     .of .cp .na {
@@ -155,6 +157,8 @@ export default {
     .of .bt ul li {
         width: 1rem;
         height: 4rem;
+        width: 2rem\9;
+        height: 8rem\9;
         margin: 0 2.4%;
     }
 }

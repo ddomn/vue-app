@@ -1,5 +1,5 @@
 <template>
-  <div class="ts ovhd">
+  <div class="ts ovhd minh">
     <div class="tp">
       <h2>我们的特色</h2>
       <span>适合各类场合，在哪里它都是亮点</span>

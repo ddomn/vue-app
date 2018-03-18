@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="about minh">
         <div class="tp">
             <h2>关于我们</h2>
             <span>本公司目前员工10人，有着优良的团队作风和丰富的市场经验！</span>
@@ -10,7 +10,7 @@
                 <li v-for="id in dt" :key="id.id">
                     <div>
                         <img src="../assets/img/ico.png" />
-                        <h2>{{id.id}}</h2>
+                        <h3>{{id.id}}</h3>
                     </div>
                     <div>
                         <span>{{id.vl}}</span>
@@ -58,8 +58,8 @@ export default {
     padding: 1.5%;
     list-style-type: none;
 }
-.about .bt ul li h2{
-    font-size: 1.5rem;
+.about .bt ul li h3{
+    /* font-size: 3.5rem; */
     display: inline;
 }
 .about .bt ul li div {
@@ -67,7 +67,7 @@ export default {
 }
 .about .bt ul li div span {
     color: #666;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
  @media only screen and (max-width: 870px) {
     .about .bt ul li {

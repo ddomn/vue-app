@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="minh">
     <div class="mv">
       <div class="mvbg ovh">
           <div><img src="../assets/img/tea.png" class="imgs" /></div>
