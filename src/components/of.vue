@@ -107,7 +107,7 @@ export default {
     color: #fff;
 }
 .of .cp li {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 .of .cp .str {
     margin: 0 10rem;

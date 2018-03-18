@@ -12,6 +12,9 @@
     <div class="about"></div>
     <div class="myfeat"></div>
     <div class="product"></div>
+    <a-bout />
+    <o-l />
+    <o-f />
   </div>
 </template>
 <style>
@@ -22,7 +25,7 @@
     background: url(../assets/img/topbg2.png) no-repeat;
     background-size: 100% 100%;
     margin: auto;
-    border: 1px solid;
+    /* border: 1px solid; */
     overflow: hidden;
 }
 .mv .mvbg .imgs{
@@ -37,3 +40,15 @@
     margin-right: 17%;
 }
 </style>
+<script>
+import aBout from '@/components/about'
+import oF from '@/components/of'
+import oL from '@/components/online'
+export default {
+  components: {
+    aBout,
+    oF,
+    oL
+  }
+}
+</script>

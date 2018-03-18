@@ -1,7 +1,7 @@
 <template>
     <div class="about">
         <div class="tp">
-            <h1>关于我们</h1>
+            <h2>关于我们</h2>
             <span>本公司目前员工10人，有着优良的团队作风和丰富的市场经验！</span>
             <span>并且有成熟的线下市场！致力打造一个养生业的阿里巴巴！</span>
         </div>
@@ -36,14 +36,15 @@ export default {
 </script>
 <style>
 .about .tp {
+    margin-top: 1rem;
     text-align: center;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     color: #333;
 }
 .about .tp span {
     color: #666;
     display: block;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 .about .bt {
     margin: 2rem;
@@ -59,6 +60,7 @@ export default {
 }
 .about .bt ul li h2{
     font-size: 1.5rem;
+    display: inline;
 }
 .about .bt ul li div {
     margin-top: .5rem;
