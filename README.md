@@ -1,6 +1,7 @@
 # vuez
 
-> A Vue.js project
+> 使用vue/vue-router做的一个单页网站 
+相应式开发适配主流移动端设备
 
 ## Build Setup
 
